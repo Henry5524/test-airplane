@@ -54,7 +54,16 @@ export default function AirlineCard({ ticket, currency }: AirlineCardProps) {
             alt="airline_logo"
           />
         </AspectRatio>
-        <Button variant="solid">
+        <Button
+          variant="solid"
+          sx={{
+            color: "white",
+            bgcolor: "#FF6e00",
+            ":hover": {
+              bgcolor: "#FF8124",
+            },
+          }}
+        >
           Купить за {ticket.price}
           {currency && getSymbolFromCurrency(currency)}
         </Button>
